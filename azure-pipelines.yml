@@ -7,7 +7,7 @@ pool: omkar-hcl
 stages:
  - stage: install
    jobs: 
-    - job: install-terraform
+    - job: installterraform
       steps:
       - task: TerraformInstaller@1
         inputs:
