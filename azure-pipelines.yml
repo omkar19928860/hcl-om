@@ -9,7 +9,7 @@ stages:
    jobs: 
     - job: installterraform
       steps:
-      - task: TerraformInstaller@1
+      - task: TerraformInstaller@0
         inputs:
           terraformVersion: 'latest'
  - stage: init
