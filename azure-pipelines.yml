@@ -12,5 +12,18 @@ stages:
       - task: TerraformInstaller@1
         inputs:
           terraformVersion: 'latest'
+ - stage: init
+   jobs:
+    - job: terraforminit
+      steps:
+      - task: TerraformTask@5
+        inputs:
+          provider: 'azurerm'
+          command: 'init'
+          workingDirectory: '$(System.DefaultWorkingDirectory)/parent'
+          backendServiceArm: 'HCL-infrasc'
+          backendAzureRmStorageAccountName: 'omkarst3455'
+          backendAzureRmContainerName: 'tfstate'
+          backendAzureRmKey: 'terraform.tfstate'
 
   
