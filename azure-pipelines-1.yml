@@ -13,7 +13,7 @@ stages:
         inputs:
           provider: 'azurerm'
           command: 'init'
-          workingDirectory: '$(System.DefaultWorkingDirectory)/'
+          workingDirectory: '$(System.DefaultWorkingDirectory)'
           backendServiceArm: 'HCL-infrasc'
           backendAzureRmStorageAccountName: 'omkarhcl123'
           backendAzureRmContainerName: 'omkarcont'
