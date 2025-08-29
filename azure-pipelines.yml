@@ -1,6 +1,6 @@
 
-trigger:
-- main
+trigger: none
+
 
 pool: omkar-hcl
 
@@ -18,7 +18,7 @@ stages:
         inputs:
           provider: 'azurerm'
           command: 'init'
-          workingDirectory: "$(System.DefaultWorkingDirectory)/HCL-OM"
+          workingDirectory: '$(System.DefaultWorkingDirectory)'
           backendServiceArm: 'HCL-infrasc'
           backendAzureRmStorageAccountName: 'omkarhcl123'
           backendAzureRmContainerName: 'omkarcont'
