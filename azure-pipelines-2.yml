@@ -1,0 +1,25 @@
+trigger:
+ - main
+pool : hclom
+
+stages:
+ - stage: terraforminstall
+   jobs:
+    - job: terraforminstall
+      steps: 
+      - task: TerraformInstaller@1
+        inputs:
+          terraformVersion: 'latest'
+ - stage: terraforminti
+   jobs:
+    - job: terraforminit
+      steps:
+      - task: TerraformTask@5
+        inputs:
+          provider: 'azurerm'
+          command: 'init'
+          workingDirectory: '$(System.DefaultWorkingDirectory)/parent'
+          backendServiceArm: 'HCL-infrasc'
+          backendAzureRmStorageAccountName: 'omkarhcl123'
+          backendAzureRmContainerName: 'omkarcont'
+          backendAzureRmKey: 'om.tfstate'
