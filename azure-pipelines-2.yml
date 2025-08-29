@@ -10,10 +10,6 @@ stages:
       - task: TerraformInstaller@1
         inputs:
           terraformVersion: 'latest'
- - stage: terraforminti
-   jobs:
-    - job: terraforminit
-      steps:
       - task: TerraformTask@5
         inputs:
           provider: 'azurerm'
