@@ -21,10 +21,11 @@ stages:
         inputs:
           provider: 'azurerm'
           command: 'init'
-          workingDirectory: 'C:\Users\OMKAR SINGH\OneDrive\Documents\Downloads\azure document sof\vsts-agent-win-x64-4.260.0\_work\1\s\parent'
+          workingDirectory: '$(System.DefaultWorkingDirectory)/parent'
           backendServiceArm: 'HCL-infrasc'
           backendAzureRmStorageAccountName: 'omkarst3455'
           backendAzureRmContainerName: 'omkar'
           backendAzureRmKey: 'terraform.tfstate'
+     
 
   
