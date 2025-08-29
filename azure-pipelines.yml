@@ -12,9 +12,6 @@ stages:
       - task: TerraformInstaller@1
         inputs:
           terraformVersion: '1.8.4'
-      
- - stage: init
-   jobs:
     - job: terraforminit
       steps:
       - task: TerraformTask@5
@@ -23,8 +20,8 @@ stages:
           command: 'init'
           workingDirectory: "$(System.DefaultWorkingDirectory)/parent"
           backendServiceArm: 'HCL-infrasc'
-          backendAzureRmStorageAccountName: 'omkarst3455'
-          backendAzureRmContainerName: 'omkar'
+          backendAzureRmStorageAccountName: 'omkarhcl123'
+          backendAzureRmContainerName: 'omkarcont'
           backendAzureRmKey: 'terraform.tfstate'
      
 
